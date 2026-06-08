@@ -48,6 +48,7 @@ import { AppFooter } from "./ui/components/AppFooter";
 import { downloadSvgAsPng } from "./ui/exportSvg";
 import { downloadHtmlReport, downloadJson } from "./ui/exportReport";
 import { getModelLabel, t } from "./i18n";
+import { Analytics } from "@vercel/analytics/react";
 
 const RayBundleView = lazy(() =>
   import("./ui/components/RayBundleView").then((module) => ({
@@ -1999,6 +2000,7 @@ export default function App() {
       </div>
 
       <AppFooter language={state.language} />
+      <Analytics />
     </div>
   );
 }
